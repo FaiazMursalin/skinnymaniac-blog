@@ -1,19 +1,27 @@
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import BlogList from "./BlogList";
+
 const Home = () => {
-    const [blogs,setblogs]=useState([
-        {title:'My First Blog',body:'lorem0...............................',author:'faiaz',key:1},
-        {title:'eksho din e react shikhun',body:'lorem0...............................',author:'mursalin',key:2},
-        {title:'crash course of jibon, hoye jan smart',body:'lorem0...............................',author:'faiaz',key:3}
-    ]);
+    const [blogs,setBlogs]=useState(null);
+    //const [name,setName]=useState('mario')
+    
+    
+    useEffect(() => {
+        fetch('http://localhost:8000/blogs')
+            .then(res =>{
+                return res.json();
+            })
+            .then(data=>{
+                setBlogs(data);
+            });
+        
+    },[]);
     
     return (
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs!" />
-            <BlogList blogs={blogs.filter((blog)=>{
-                return blog.author==='faiaz';
-
-            })} title="faiaz's Blogs!" />
+            {blogs && <BlogList blogs={blogs} title="All Blogs!"  />}
+            
+            
         </div>
     );
 }

@@ -1,0 +1,22 @@
+{
+    "blogs":[
+        {
+            "title":"My First Blog",
+            "body":"lorem0...............................",
+            "author":"faiaz",
+            "id":1
+        },
+        {
+            "title":"eksho din e react.js shikhun",
+            "body":"lorem0...............................",
+            "author":"mursalin",
+            "id":2
+        },
+        {
+            "title":"crash course of jibon, hoye jan smart",
+            "body":"lorem0...............................",
+            "author":"faiaz",
+            "id":3
+        }
+    ]
+}

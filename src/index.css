@@ -47,3 +47,10 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+.blog-preview button{
+  padding: 5px 10px;
+  margin: 10px 5px;
+  color: #f1356d;
+  background-color: #fafafa;
+  
+}
