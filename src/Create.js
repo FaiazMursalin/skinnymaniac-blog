@@ -11,7 +11,7 @@ const Create = () => {
         e.preventDefault();
         const blog = {title,body,author};
         setIsPending(true);
-        fetch('http://localhost:8000/blogs',{
+        fetch('https://skinnymaniac-blog.vercel.app/blogs',{
             method:'POST',
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(blog)

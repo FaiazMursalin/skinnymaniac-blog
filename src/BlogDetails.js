@@ -3,10 +3,10 @@ import useFetch from "./useFetch";
 import { useHistory } from "react-router";
 const BlogDetails = () => {
     const {id} =useParams();
-    const {data:blog,err,isPending} = useFetch('http://localhost:8000/blogs/' + id);
+    const {data:blog,err,isPending} = useFetch('https://skinnymaniac-blog.vercel.app/blogs/' + id);
     const history = useHistory();
     const handleDelete=()=>{
-        fetch('http://localhost:8000/blogs/'+blog.id,{
+        fetch('https://skinnymaniac-blog.vercel.app/blogs/'+blog.id,{
             method:'DELETE'
         }).then(()=>{
             history.push('/');
